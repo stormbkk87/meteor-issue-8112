@@ -1,13 +1,13 @@
 # meteor-issue-8112
 
-git clone https://github.com/stormbkk87/meteor-issue-8112.git
-cd meteor-issue-8112
-meteor npm install
+git clone https://github.com/stormbkk87/meteor-issue-8112.git<br/>
+cd meteor-issue-8112<br/>
+meteor npm install<br/>
 
 - Change the App ID to your test App ID in the mobile-config.js
 - Instructions below or can use the URL below I followed to create a Voip Services certificate on developer.apple.com for your App ID
 
-http://www.nikola-breznjak.com/blog/ios/create-native-ios-app-can-receive-voip-push-notifications/
+<pre><code>http://www.nikola-breznjak.com/blog/ios/create-native-ios-app-can-receive-voip-push-notifications/</code></pre>
 
 - Create App ID on developer.apple.com
 - Create CSR by going on Mac to Applications > Utilities > Keychain Access.app
@@ -41,7 +41,7 @@ meteor run ios-device --mobile-server http://192.x.x.x:3000
 - Choose menu Product > Run
 - Once the app comes up, copy-paste the device id next to "credentials:" that comes up in the XCode debug console to the below command
 
-python push_debug.py -s ./VOIP.pem "<credentials-device-id>"
+python push_debug.py -s ./VOIP.pem "/<credentials-device-id/>"
 
 - Run the above "push_debug.py" commandline script while phone is in foreground
 - Note the UUID shown in the XCode debug console labeled "UUID". This is from the Swift code.
