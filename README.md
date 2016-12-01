@@ -28,12 +28,13 @@ meteor npm install
 - Select to save as a .p12 file to a folder where we'll test the voip push
 - Navigate to the folder where you exported the .p12 file and run the following command on commandline
 
-openssl pkcs12 -in YOUR_CERT.p12 -out VOIP.pem -nodes -clcerts
+<pre><code>openssl pkcs12 -in YOUR_CERT.p12 -out VOIP.pem -nodes -clcerts</code></pre>
 
 - Move the script "push_debug.py" from the git folder "private/scripts" to the same folder as the newly created VOIP.pem file
-- Run meteor command with your local IP address, drop your firewall
+- Run meteor command with your local IP address, drop your Mac firewall or hot code push won't work
+- Make sure Mac and iPhone are both on the same wifi network
 
-meteor run ios-device --mobile-server http://192.x.x.x:3000
+<pre><code>meteor run ios-device --mobile-server http://192.x.x.x:3000</code></pre>
 
 - Once XCode comes up, plugin iPhone with at least iOS 9, I used iPhone 6 iOS 10.0.2
 - Under "General" set Signing Team
@@ -42,7 +43,7 @@ meteor run ios-device --mobile-server http://192.x.x.x:3000
 - Choose menu Product > Run
 - Once the app comes up, copy-paste the device id next to "credentials:" that comes up in the XCode debug console to the below command
 
-python push_debug.py -s ./VOIP.pem "/<credentials-device-id/>"
+<pre><code>python push_debug.py -s ./VOIP.pem "credentials-device-id-here"</code></pre>
 
 - Run the above "push_debug.py" commandline script while phone is in foreground
 - Note the UUID shown in the XCode debug console labeled "UUID". This is from the Swift code.
