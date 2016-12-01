@@ -1,8 +1,9 @@
 # meteor-issue-8112
 
-git clone https://github.com/stormbkk87/meteor-issue-8112.git<br/>
-cd meteor-issue-8112<br/>
-meteor npm install<br/>
+<pre><code>git clone https://github.com/stormbkk87/meteor-issue-8112.git
+cd meteor-issue-8112
+meteor npm install
+</code></pre>
 
 - Change the App ID to your test App ID in the mobile-config.js
 - Instructions below or can use the URL below I followed to create a Voip Services certificate on developer.apple.com for your App ID
