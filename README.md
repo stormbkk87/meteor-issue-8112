@@ -2,10 +2,15 @@
 
 git clone https://github.com/stormbkk87/meteor-issue-8112.git
 cd meteor-issue-8112
+meteor npm install
 
-- Change my App ID to your test App ID in the mobile-config.js
+- Change the App ID to your test App ID in the mobile-config.js
+- Instructions below or can use the URL below I followed to create a Voip Services certificate on developer.apple.com for your App ID
+
+http://www.nikola-breznjak.com/blog/ios/create-native-ios-app-can-receive-voip-push-notifications/
+
 - Create App ID on developer.apple.com
-- Create CSR by going to on Mac Applications>Utilities>Keychain Access.app
+- Create CSR by going on Mac to Applications > Utilities > Keychain Access.app
 - Click menu Keychain Access > Certificate Assistant > Request a Certificate From a Certificate Authority
 - In the information window
   - User Email address, enter your email address
