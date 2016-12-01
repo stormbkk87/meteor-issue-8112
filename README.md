@@ -53,9 +53,9 @@ meteor npm install
 - Note the UUID will show in XCode debug console labeled "UUID" from the Swift code, but will not show the Cordova callback labeled "voipPushPayload"
 - Run the same "push_debug.py" script again
 - Note the UUID from the XCode debug console labeled "UUID"
-- Notice that the XCode debug console from the Cordova javascript callback is not the current UUID but it is from the previous one
+- Notice that the XCode debug console from the Cordova javascript callback labeled "voipPushPayload" is not the current UUID but it is from the previous one
 - Unlock the iPhone and start app again
-- Notice that the UUID of the final voip push now shows up in the XCode debug console like it was in a queue waiting
+- Notice that the UUID of the final voip push now shows up in the XCode debug console labeled "voipPushPayload" like it was in a queue waiting
 - The result is that the UUID is always 1 behind in the Cordova callback console output, each successive voip push produces the previous UUID and not the current UUID.
  
 
