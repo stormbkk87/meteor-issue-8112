@@ -39,6 +39,8 @@ meteor npm install
 - Once XCode comes up, plugin iPhone with at least iOS 9, I used iPhone 6 iOS 10.0.2
 - Under "General" set Signing Team
 - Change Capabilities > Push Notifications > On
+- Change Capabilities > Background Modes > On
+- Select the checkboxes Voice over IP, Background fetch, Remote notifications
 - Select real device, not simulator
 - Choose menu Product > Run
 - Once the app comes up, copy-paste the device id next to "credentials:" that comes up in the XCode debug console to the below command
